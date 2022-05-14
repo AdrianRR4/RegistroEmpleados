@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/layout :: head">
+
+</head>
+
+<body>
+
+	<div class="container py-4">
+	
+	<div class="card bg-light">
+			
+			<div class="card-header" th:text="${title}"> </div> 
+	 			<div class="card-body">
+	 			
+	 			<img th:if="${#strings.length(employee.picture)>0}" class="img-thumbnail rounded float-left" style="max-width:25%;" th:src="@{'/uploads/' + ${employee.picture}}" th:alt="${employee.picture}">
+	 			
+	 			<ul class="list-group">
+	 			<li class="list-group-item" th:text="${employee.name}" ></li>
+	 			<li class="list-group-item" th:text="${employee.lastName}" ></li>
+	 			<li class="list-group-item" th:text="${employee.dateOfBirth}" ></li>
+	 			<li class="list-group-item" th:text="${employee.email}" ></li>
+	 			</ul>
+	 			
+	 			
+	 			</div>
+	</div>
+
+	</div>
+
+</body>
+
+</html>

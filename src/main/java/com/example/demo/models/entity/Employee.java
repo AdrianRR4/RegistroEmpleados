@@ -44,7 +44,7 @@ public class Employee implements Serializable{
 	@Email
 	private String email;
 	
-	
+	private String picture;
 	
 	
 	
@@ -130,6 +130,22 @@ public class Employee implements Serializable{
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+
+
+
+
+	public String getPicture() {
+		return picture;
+	}
+
+
+
+
+
+	public void setPicture(String picture) {
+		this.picture = picture;
 	}
 
 
